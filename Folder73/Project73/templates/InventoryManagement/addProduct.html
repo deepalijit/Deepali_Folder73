@@ -1,0 +1,16 @@
+{% extends 'InventoryManagement/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>add Products</title>
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+<form method="post" class="jumbotron">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button>Submit</button>
+</form>
+</div>
+{% endblock %}
